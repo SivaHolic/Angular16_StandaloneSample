@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
@@ -10,5 +10,11 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'standaloneSample';
+  public name = signal('standaloneSample');
+
+  public sample(){
+  //this.name.set(`${this.name()} ${Math.random()}`);
+ this.name.update((value)=> `${value} - ${1+1}`);
+ 
+  }
 }

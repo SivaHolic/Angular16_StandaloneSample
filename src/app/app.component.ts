@@ -15,6 +15,6 @@ export class AppComponent {
   public sample(){
   //this.name.set(`${this.name()} ${Math.random()}`);
  this.name.update((value)=> `${value} - ${1+1}`);
- 
+ console.log('hi');
   }
 }
